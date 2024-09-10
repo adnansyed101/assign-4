@@ -30,3 +30,13 @@ function checkDigitsInName(name) {
   }
 }
 
+function calculateFinalScore(obj) {
+  if (typeof obj === "object") {
+    const farmerPoints = obj.isFFamily ? 20 : 0;
+    const totalPoints = obj.testScore + obj.schoolGrade + farmerPoints;
+
+    return totalPoints >= 80;
+  } else {
+    return "Invalid Input";
+  }
+}
