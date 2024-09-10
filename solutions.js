@@ -21,3 +21,12 @@ function sendNotification(email) {
     return "Invalid Input";
   }
 }
+
+function checkDigitsInName(name) {
+  if (typeof name === "string") {
+    return /\d/.test(name);
+  } else {
+    return "Invalid Input";
+  }
+}
+
