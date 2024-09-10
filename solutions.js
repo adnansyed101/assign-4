@@ -40,3 +40,21 @@ function calculateFinalScore(obj) {
     return "Invalid Input";
   }
 }
+
+function waitingTime(waitingTimes, serialNumber) {
+  if (Array.isArray(waitingTimes) && typeof serialNumber === "number") {
+    let totalWaitingTime = 0;
+    for (const num of waitingTimes) {
+      totalWaitingTime += num;
+    }
+    const averageWaitingTime = Math.round(
+      totalWaitingTime / waitingTimes.length
+    );
+
+    const peopleBefore = serialNumber - 1 - waitingTimes.length;
+
+    return averageWaitingTime * peopleBefore;
+  } else {
+    return "Invalid Input";
+  }
+}
