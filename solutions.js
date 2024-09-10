@@ -12,4 +12,12 @@ function calculateTax(income, expenses) {
   }
 }
 
-
+function sendNotification(email) {
+  if (email.includes("@")) {
+    const name = email.split("@")[0];
+    const domain = email.split("@")[1];
+    return `${name} sent you an email from ${domain}`;
+  } else {
+    return "Invalid Input";
+  }
+}
